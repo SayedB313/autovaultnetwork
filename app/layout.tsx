@@ -13,9 +13,6 @@ export const metadata: Metadata = {
     siteName: "AutoVaultNetwork",
     type: "website",
   },
-  icons: {
-    icon: "/favicon.ico",
-  },
 };
 
 export default function RootLayout({
@@ -25,6 +22,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link
+          href="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css"
+          rel="stylesheet"
+        />
+      </head>
       <body>{children}</body>
     </html>
   );
