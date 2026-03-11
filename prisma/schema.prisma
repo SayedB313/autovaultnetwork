@@ -1,0 +1,129 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Facility {
+  id            String   @id @default(cuid())
+  slug          String   @unique
+  googlePlaceId String?  @unique @map("google_place_id")
+  name          String
+  description   String?  @db.Text
+  address       String
+  city          String
+  state         String
+  zip           String?
+  country       String   @default("US")
+  lat           Float
+  lng           Float
+  phone         String?
+  website       String?
+  email         String?
+  rating        Float?
+  reviewCount   Int?     @map("review_count")
+  businessStatus String? @map("business_status")
+  types         String[]
+  storageTypes  String[] @map("storage_types")
+  tier          FacilityTier @default(FREE)
+  featured      Boolean  @default(false)
+  verified      Boolean  @default(false)
+  priceMonthly  Float?   @map("price_monthly")
+  claimed       Boolean  @default(false)
+  claimedAt     DateTime? @map("claimed_at")
+  photos        Photo[]
+  metaTitle     String?  @map("meta_title")
+  metaDesc      String?  @map("meta_desc")
+  createdAt     DateTime @default(now()) @map("created_at")
+  updatedAt     DateTime @updatedAt @map("updated_at")
+
+  @@index([state, city])
+  @@index([lat, lng])
+  @@map("facilities")
+}
+
+model Photo {
+  id         String   @id @default(cuid())
+  facilityId String   @map("facility_id")
+  url        String
+  isPrimary  Boolean  @default(false) @map("is_primary")
+  createdAt  DateTime @default(now()) @map("created_at")
+  facility   Facility @relation(fields: [facilityId], references: [id], onDelete: Cascade)
+
+  @@map("photos")
+}
+
+model CityPage {
+  id            String   @id @default(cuid())
+  city          String
+  state         String
+  stateCode     String   @map("state_code")
+  slug          String   @unique
+  facilityCount Int      @map("facility_count")
+  lat           Float?
+  lng           Float?
+  metaTitle     String?  @map("meta_title")
+  metaDesc      String?  @map("meta_desc")
+  content       String?  @db.Text
+  createdAt     DateTime @default(now()) @map("created_at")
+  updatedAt     DateTime @updatedAt @map("updated_at")
+
+  @@unique([city, state])
+  @@index([state])
+  @@map("city_pages")
+}
+
+model StatePage {
+  id            String   @id @default(cuid())
+  state         String   @unique
+  stateCode     String   @unique @map("state_code")
+  slug          String   @unique
+  facilityCount Int      @map("facility_count")
+  cityCount     Int      @map("city_count")
+  metaTitle     String?  @map("meta_title")
+  metaDesc      String?  @map("meta_desc")
+  content       String?  @db.Text
+  createdAt     DateTime @default(now()) @map("created_at")
+  updatedAt     DateTime @updatedAt @map("updated_at")
+
+  @@map("state_pages")
+}
+
+model BlogPost {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  title       String
+  excerpt     String?  @db.Text
+  content     String   @db.Text
+  coverImage  String?  @map("cover_image")
+  published   Boolean  @default(false)
+  publishedAt DateTime? @map("published_at")
+  metaTitle   String?  @map("meta_title")
+  metaDesc    String?  @map("meta_desc")
+  keywords    String[]
+  targetCity  String?  @map("target_city")
+  targetState String?  @map("target_state")
+  postType    BlogPostType @default(GENERAL) @map("post_type")
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  @@map("blog_posts")
+}
+
+enum FacilityTier {
+  FREE
+  STARTER
+  PRO
+}
+
+enum BlogPostType {
+  GENERAL
+  CITY_GUIDE
+  STATE_GUIDE
+  VEHICLE_TYPE
+  INFORMATIONAL
+  PILLAR
+}

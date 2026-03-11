@@ -1,0 +1,31 @@
+import type { Metadata } from "next";
+import "./globals.css";
+
+export const metadata: Metadata = {
+  title: {
+    default: "AutoVaultNetwork — Find Car Storage Near You",
+    template: "%s | AutoVaultNetwork",
+  },
+  description:
+    "Search 9,400+ indoor and climate-controlled car storage facilities across the US. Find the best car storage in your city — filter by type, price, and rating.",
+  metadataBase: new URL("https://autovaultnetwork.com"),
+  openGraph: {
+    siteName: "AutoVaultNetwork",
+    type: "website",
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  );
+}

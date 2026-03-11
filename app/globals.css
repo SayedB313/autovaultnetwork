@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #0C1A2E;
+  --navy-mid: #1B2E47;
+  --navy-light: #2A4266;
+  --brand: #1B4FD8;
+  --brand-hover: #1540B0;
+  --accent: #E85D2F;
+  --accent-light: #FF7A4D;
+  --warm-white: #FAFAF8;
+  --gray-100: #F1F3F7;
+  --gray-200: #E2E6EF;
+  --gray-300: #C8CDD8;
+  --gray-500: #6B7280;
+  --gray-700: #374151;
+  --gray-900: #111827;
+  --yellow: #F5A623;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Figtree', sans-serif;
+  background-color: var(--warm-white);
+  color: var(--gray-900);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Syne', sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--gray-100); }
+::-webkit-scrollbar-thumb { background: var(--gray-300); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--gray-500); }
+
+/* Mapbox overrides */
+.mapboxgl-ctrl-logo { display: none !important; }
+.mapboxgl-ctrl-attrib { display: none !important; }
+
+/* Custom facility card hover */
+.facility-card {
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.facility-card:hover {
+  box-shadow: 0 8px 32px rgba(12, 26, 46, 0.12);
+  transform: translateY(-2px);
+}
+
+/* Search input focus ring */
+.search-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(27, 79, 216, 0.15);
+}
+
+/* Star rating */
+.star-filled { color: var(--yellow); }
+.star-empty { color: var(--gray-300); }
+
+/* Pulse animation for map markers */
+@keyframes pulse-ring {
+  0% { transform: scale(0.8); opacity: 0.8; }
+  100% { transform: scale(2); opacity: 0; }
+}
+
+.map-marker-pulse::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--brand);
+  animation: pulse-ring 2s ease-out infinite;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--brand) 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hero grid pattern */
+.hero-grid {
+  background-image: 
+    linear-gradient(rgba(27, 79, 216, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(27, 79, 216, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Claim badge */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
