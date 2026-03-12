@@ -51,7 +51,7 @@ export default function Footer() {
                 </svg>
               </div>
               <span className="font-bold text-white text-base" style={{ fontFamily: 'Syne, sans-serif' }}>
-                AutoVault<span className="text-[#1B4FD8]">Network</span>
+                CarStorage<span className="text-[#1B4FD8]">Finder</span>
               </span>
             </div>
             <p className="text-sm text-white/60 leading-relaxed">
@@ -59,7 +59,7 @@ export default function Footer() {
             </p>
             <div className="mt-5 flex items-center gap-1.5">
               <div className="w-2 h-2 rounded-full bg-emerald-400"></div>
-              <span className="text-xs text-white/50">9,413 facilities listed</span>
+              <span className="text-xs text-white/50">8,900+ facilities listed</span>
             </div>
           </div>
 
@@ -82,9 +82,9 @@ export default function Footer() {
             <h4 className="text-xs font-semibold text-white/40 uppercase tracking-widest mb-4">Resources</h4>
             <ul className="space-y-2.5">
               <li><Link href="/blog" className="text-sm text-white/65 hover:text-white transition-colors">Storage Guides</Link></li>
-              <li><Link href="/blog/climate-controlled-car-storage" className="text-sm text-white/65 hover:text-white transition-colors">Climate Controlled Storage</Link></li>
-              <li><Link href="/blog/car-storage-cost" className="text-sm text-white/65 hover:text-white transition-colors">Car Storage Costs</Link></li>
-              <li><Link href="/blog/indoor-car-storage" className="text-sm text-white/65 hover:text-white transition-colors">Indoor Car Storage</Link></li>
+              <li><Link href="/search?type=CLIMATE_CONTROLLED" className="text-sm text-white/65 hover:text-white transition-colors">Climate Controlled Storage</Link></li>
+              <li><Link href="/search?type=INDOOR" className="text-sm text-white/65 hover:text-white transition-colors">Indoor Car Storage</Link></li>
+              <li><Link href="/search?type=COVERED" className="text-sm text-white/65 hover:text-white transition-colors">Covered Storage</Link></li>
               <li>
                 <a href="https://autovault.network" target="_blank" rel="noopener" className="text-sm text-[#E85D2F]/80 hover:text-[#E85D2F] transition-colors">
                   AutoVault (Luxury) ↗
@@ -97,25 +97,15 @@ export default function Footer() {
           <div>
             <h4 className="text-xs font-semibold text-white/40 uppercase tracking-widest mb-4">For Facilities</h4>
             <ul className="space-y-2.5">
-              <li><Link href="/claim" className="text-sm text-white/65 hover:text-white transition-colors">Claim Your Listing</Link></li>
-              <li><Link href="/pricing" className="text-sm text-white/65 hover:text-white transition-colors">Pricing & Plans</Link></li>
-              <li><Link href="/contact" className="text-sm text-white/65 hover:text-white transition-colors">Contact Us</Link></li>
+              <li><Link href="/search" className="text-sm text-white/65 hover:text-white transition-colors">Search Facilities</Link></li>
+              <li><Link href="/blog" className="text-sm text-white/65 hover:text-white transition-colors">Storage Guides</Link></li>
             </ul>
-            <div className="mt-6 p-4 bg-white/5 rounded-xl border border-white/10">
-              <p className="text-xs text-white/50 mb-2">Is your facility listed?</p>
-              <Link
-                href="/claim"
-                className="text-xs font-semibold text-[#1B4FD8] hover:text-blue-400 transition-colors"
-              >
-                Claim it for free →
-              </Link>
-            </div>
           </div>
         </div>
 
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-3">
           <p className="text-xs text-white/35">
-            © 2026 AutoVaultNetwork. Part of the AutoVault family of directories.
+            © 2026 CarStorageFinder. Part of the AutoVault family of directories.
           </p>
           <div className="flex items-center gap-5">
             <Link href="/privacy" className="text-xs text-white/35 hover:text-white/60 transition-colors">Privacy</Link>

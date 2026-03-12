@@ -3,14 +3,14 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "AutoVaultNetwork — Find Car Storage Near You",
-    template: "%s | AutoVaultNetwork",
+    default: "CarStorageFinder — Find Car Storage Near You",
+    template: "%s | CarStorageFinder",
   },
   description:
-    "Search 9,400+ indoor and climate-controlled car storage facilities across the US. Find the best car storage in your city — filter by type, price, and rating.",
-  metadataBase: new URL("https://autovaultnetwork.com"),
+    "Search 8,900+ indoor and climate-controlled car storage facilities across the US. Find the best car storage in your city — filter by type, price, and rating.",
+  metadataBase: new URL("https://carstoragefinder.co"),
   openGraph: {
-    siteName: "AutoVaultNetwork",
+    siteName: "CarStorageFinder",
     type: "website",
   },
 };

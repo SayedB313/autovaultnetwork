@@ -97,7 +97,7 @@ export default function HomePage() {
             <div className="flex items-center gap-2 mb-6">
               <div className="w-2 h-2 rounded-full bg-[#E85D2F] animate-pulse" />
               <span className="text-sm font-medium text-white/60 tracking-wide">
-                9,413 facilities across the US
+                8,900+ facilities across the US
               </span>
             </div>
 
@@ -133,7 +133,7 @@ export default function HomePage() {
             {/* Stats */}
             <div className="flex flex-wrap gap-8 mt-14 pt-8 border-t border-white/10">
               {[
-                { val: "9,413+", label: "Facilities listed" },
+                { val: "8,900+", label: "Facilities listed" },
                 { val: "234", label: "Cities covered" },
                 { val: "50", label: "States + Canada" },
                 { val: "Free", label: "To search & contact" },
@@ -235,7 +235,7 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-2xl mx-auto mb-14">
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3" style={{ fontFamily: "Syne, sans-serif" }}>
-                How AutoVaultNetwork Works
+                How CarStorageFinder Works
               </h2>
               <p className="text-gray-500 leading-relaxed">
                 Search, compare, and contact storage facilities directly — no signup, no fees.
@@ -321,17 +321,19 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <Link
-                href="/claim"
+                href="/search"
                 className="bg-[#0C1A2E] hover:bg-[#1B2E47] text-white font-semibold px-6 py-3 rounded-xl text-sm transition-colors"
               >
-                Claim your free listing
+                Search facilities
               </Link>
-              <Link
-                href="/pricing"
-                className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
+              <a
+                href="https://autovault.network"
+                target="_blank"
+                rel="noopener"
+                className="text-sm font-medium text-[#E85D2F] hover:text-[#c04a22] transition-colors flex items-center gap-1"
               >
-                View upgrade plans →
-              </Link>
+                Luxury storage on AutoVault ↗
+              </a>
             </div>
           </div>
         </section>

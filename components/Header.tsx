@@ -19,7 +19,7 @@ export default function Header() {
             </div>
             <div>
               <span className="font-bold text-[#0C1A2E] text-lg tracking-tight leading-none" style={{ fontFamily: 'Syne, sans-serif' }}>
-                AutoVault<span className="text-[#1B4FD8]">Network</span>
+                CarStorage<span className="text-[#1B4FD8]">Finder</span>
               </span>
             </div>
           </Link>
@@ -48,10 +48,10 @@ export default function Header() {
           {/* CTA */}
           <div className="hidden md:flex items-center gap-3">
             <Link
-              href="/claim"
+              href="/search"
               className="text-sm font-semibold text-gray-700 hover:text-gray-900 transition-colors"
             >
-              List Your Facility
+              Browse All
             </Link>
             <Link
               href="/search"
@@ -83,7 +83,7 @@ export default function Header() {
           <Link href="/search" className="text-sm font-medium text-gray-700 py-2" onClick={() => setMobileOpen(false)}>Find Storage</Link>
           <Link href="/blog" className="text-sm font-medium text-gray-700 py-2" onClick={() => setMobileOpen(false)}>Resources</Link>
           <a href="https://autovault.network" target="_blank" rel="noopener" className="text-sm font-medium text-[#E85D2F] py-2">Luxury Storage ↗</a>
-          <Link href="/claim" className="text-sm font-medium text-gray-700 py-2">List Your Facility</Link>
+          <Link href="/search" className="text-sm font-medium text-gray-700 py-2">Browse All</Link>
           <Link href="/search" className="text-sm font-semibold bg-[#1B4FD8] text-white px-4 py-2.5 rounded-lg text-center">Find Storage</Link>
         </div>
       )}

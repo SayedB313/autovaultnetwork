@@ -227,7 +227,7 @@ function SearchPageContent() {
           <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
             <p className="text-sm text-gray-600">
               <span className="font-semibold text-gray-900">Storing an exotic or collector car?</span>{" "}
-              AutoVault lists vetted luxury car storage facilities.
+              AutoVault is our curated directory of vetted luxury car storage facilities.
             </p>
             <a
               href="https://autovault.network"
