@@ -4,18 +4,18 @@ import Footer from "@/components/Footer";
 import SearchBar from "@/components/SearchBar";
 
 const TOP_CITIES = [
-  { name: "Los Angeles", state: "CA", count: 71, href: "/california/los-angeles" },
-  { name: "Phoenix", state: "AZ", count: 60, href: "/arizona/phoenix" },
-  { name: "Las Vegas", state: "NV", count: 59, href: "/nevada/las-vegas" },
-  { name: "Houston", state: "TX", count: 56, href: "/texas/houston" },
-  { name: "Miami", state: "FL", count: 54, href: "/florida/miami" },
-  { name: "Dallas", state: "TX", count: 52, href: "/texas/dallas" },
-  { name: "Chicago", state: "IL", count: 48, href: "/illinois/chicago" },
-  { name: "Denver", state: "CO", count: 47, href: "/colorado/denver" },
-  { name: "Atlanta", state: "GA", count: 45, href: "/georgia/atlanta" },
-  { name: "San Diego", state: "CA", count: 44, href: "/california/san-diego" },
-  { name: "Nashville", state: "TN", count: 43, href: "/tennessee/nashville" },
-  { name: "Seattle", state: "WA", count: 41, href: "/washington/seattle" },
+  { name: "Los Angeles", state: "CA", count: 71, href: "/ca/los-angeles" },
+  { name: "Phoenix", state: "AZ", count: 60, href: "/az/phoenix" },
+  { name: "Las Vegas", state: "NV", count: 59, href: "/nv/las-vegas" },
+  { name: "Houston", state: "TX", count: 56, href: "/tx/houston" },
+  { name: "Miami", state: "FL", count: 54, href: "/fl/miami" },
+  { name: "Dallas", state: "TX", count: 52, href: "/tx/dallas" },
+  { name: "Chicago", state: "IL", count: 48, href: "/il/chicago" },
+  { name: "Denver", state: "CO", count: 47, href: "/co/denver" },
+  { name: "Atlanta", state: "GA", count: 45, href: "/ga/atlanta" },
+  { name: "San Diego", state: "CA", count: 44, href: "/ca/san-diego" },
+  { name: "Nashville", state: "TN", count: 43, href: "/tn/nashville" },
+  { name: "Seattle", state: "WA", count: 41, href: "/wa/seattle" },
 ];
 
 const STORAGE_TYPES = [

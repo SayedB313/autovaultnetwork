@@ -1,14 +1,14 @@
 import Link from "next/link";
 
 const TOP_CITIES = [
-  { label: "Los Angeles, CA", href: "/california/los-angeles" },
-  { label: "Phoenix, AZ", href: "/arizona/phoenix" },
-  { label: "Houston, TX", href: "/texas/houston" },
-  { label: "Las Vegas, NV", href: "/nevada/las-vegas" },
-  { label: "Miami, FL", href: "/florida/miami" },
-  { label: "Dallas, TX", href: "/texas/dallas" },
-  { label: "Chicago, IL", href: "/illinois/chicago" },
-  { label: "Denver, CO", href: "/colorado/denver" },
+  { label: "Los Angeles, CA", href: "/ca/los-angeles" },
+  { label: "Phoenix, AZ", href: "/az/phoenix" },
+  { label: "Houston, TX", href: "/tx/houston" },
+  { label: "Las Vegas, NV", href: "/nv/las-vegas" },
+  { label: "Miami, FL", href: "/fl/miami" },
+  { label: "Dallas, TX", href: "/tx/dallas" },
+  { label: "Chicago, IL", href: "/il/chicago" },
+  { label: "Denver, CO", href: "/co/denver" },
 ];
 
 export default function Footer() {

@@ -14,7 +14,7 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { state, city } = await params;
-  const slug = `${state}/${city}`;
+  const slug = `${city}-${state}`;
   const cityPage = await prisma.cityPage.findUnique({ where: { slug } });
   if (!cityPage) return { title: "Not Found" };
   return {
@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function CityPage({ params }: Props) {
   const { state, city } = await params;
-  const slug = `${state}/${city}`;
+  const slug = `${city}-${state}`;
 
   const cityPage = await prisma.cityPage.findUnique({ where: { slug } });
   if (!cityPage) notFound();

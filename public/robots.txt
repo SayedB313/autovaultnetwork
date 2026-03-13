@@ -1,0 +1,38 @@
+# CarStorageFinder.co - Robots.txt
+# Last updated: 2026-03-12
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+# AI Crawlers - Welcome
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Gemini
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# Sitemap
+Sitemap: https://carstoragefinder.co/sitemap.xml
+
+# LLMs context
+# See /llms.txt for AI-optimized site description

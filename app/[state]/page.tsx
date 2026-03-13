@@ -58,7 +58,7 @@ export default async function StatePage({ params }: Props) {
             {cities.map((c) => (
               <Link
                 key={c.slug}
-                href={`/${state}/${c.slug.split("/").pop()}`}
+                href={`/${state}/${c.slug.replace(new RegExp(`-${state}$`), "")}`}
                 className="group p-4 bg-white rounded-xl border border-gray-200 hover:border-[#1B4FD8] hover:shadow-sm transition-all"
               >
                 <div className="font-bold text-sm text-gray-900 group-hover:text-[#1B4FD8]" style={{ fontFamily: "Syne, sans-serif" }}>
